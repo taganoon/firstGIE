@@ -47,6 +47,8 @@
 		4B72C1C72847391900CB70DA /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B72C1C62847391900CB70DA /* Post.swift */; };
 		4B72C1C9284739AE00CB70DA /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B72C1C8284739AE00CB70DA /* AppUser.swift */; };
 		4B72C1CB28473A5700CB70DA /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B72C1CA28473A5700CB70DA /* TimelineViewController.swift */; };
+		4B72C1D4284F175D00CB70DA /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B72C1D3284F175D00CB70DA /* AccountViewController.swift */; };
+		4B72C1D6284F184E00CB70DA /* アカウント作成コード.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B72C1D5284F184E00CB70DA /* アカウント作成コード.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,8 @@
 		4B72C1C62847391900CB70DA /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		4B72C1C8284739AE00CB70DA /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
 		4B72C1CA28473A5700CB70DA /* TimelineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
+		4B72C1D3284F175D00CB70DA /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		4B72C1D5284F184E00CB70DA /* アカウント作成コード.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "アカウント作成コード.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +173,8 @@
 				4B72C1C62847391900CB70DA /* Post.swift */,
 				4B72C1C8284739AE00CB70DA /* AppUser.swift */,
 				4B72C1CA28473A5700CB70DA /* TimelineViewController.swift */,
+				4B72C1D3284F175D00CB70DA /* AccountViewController.swift */,
+				4B72C1D5284F184E00CB70DA /* アカウント作成コード.swift */,
 				4B184EBF283DEFA200D3C9B6 /* Assets.xcassets */,
 				4B184EC1283DEFA200D3C9B6 /* LaunchScreen.storyboard */,
 				4B184EC4283DEFA200D3C9B6 /* Info.plist */,
@@ -359,9 +365,11 @@
 			files = (
 				4B184EBB283DEFA000D3C9B6 /* ViewController.swift in Sources */,
 				4B72C1C9284739AE00CB70DA /* AppUser.swift in Sources */,
+				4B72C1D4284F175D00CB70DA /* AccountViewController.swift in Sources */,
 				4B184EB7283DEFA000D3C9B6 /* AppDelegate.swift in Sources */,
 				4B184EB9283DEFA000D3C9B6 /* SceneDelegate.swift in Sources */,
 				4B72C1C72847391900CB70DA /* Post.swift in Sources */,
+				4B72C1D6284F184E00CB70DA /* アカウント作成コード.swift in Sources */,
 				4B72C1CB28473A5700CB70DA /* TimelineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,9 +7,10 @@ class AccountViewController: UIViewController {
     @IBOutlet var passwordTextField: UITextField!
     
     var auth: Auth
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        auth = Auth.auth()
         emailTextField.delegate = self
         passwordTextField.delegate = self
     }
@@ -25,15 +26,4 @@ extension AccountViewController: UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
-
-        @IBAction func registerAccount() {
-            let email = emailTextField.text!
-            let password = passwordTextField.text!
-            auth.createUser(withEmail: email, password: password) { (result, error) in
-                if error == nil, let result = result {
-                    // errorが nil であり、resultがnilではない == user情報がきちんと取得されている。
-                    self.performSegue(withIdentifier: "Timeline", sender: result.user) // 遷移先の画面でuser情報を渡している。
-                }
-            }
-        }
-    }
+}
