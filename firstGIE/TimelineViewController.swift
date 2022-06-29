@@ -1,49 +1,83 @@
 import UIKit
-import Firebase 
+import Firebase
 
 class TimelineViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
     @IBOutlet var tableView: UITableView!
     
     var me: AppUser!
     var database: Firestore!
-
+    var postArray: [Post] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        database = Firestore.firestore() //
-        tableView.delegate = self  // 追加
+        database = Firestore.firestore()
+        tableView.delegate = self
         tableView.dataSource = self
+        
+        let press = UILongPressGestureRecognizer(target: self, action: #selector(pressScreen))
+        press.minimumPressDuration = 1.5
+        view.isUserInteractionEnabled = true
+        view.addGestureRecognizer(press)
     }
-    database.collection("users").document(me.userID).setData([
-           "userID": me.userID
-           ], merge: true)
-   }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return postArray.count
-        }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
-            cell.textLabel?.text = postArray[indexPath.row].content
-            return cell
-    }
-    @IBAction func toAddViewController() {
-        performSegue(withIdentifier: "Add", sender: me)
-    }
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination = segue.destination as! AddViewController // segue.destinationで遷移先のViewControllerが取得可能。
-            destination.me = (sender as! AppUser)
-    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        database.collection("posts").getDocuments { (snapshot, error) in
-            if error == nil, let snapshot = snapshot {
+        database.collection("posts").getDocuments { (snapshots, error) in
+            if error == nil, let snapshots = snapshots {
                 self.postArray = []
-                for document in snapshot.documents {
+                for document in snapshots.documents {
                     let data = document.data()
                     let post = Post(data: data)
                     self.postArray.append(post)
                 }
-                self.tableView.reloadData() // 先ほど書いたprint文をこちらに変更
+                self.tableView.reloadData()
             }
         }
+        
+        database.collection("users").document(me.userID).setData([
+            "userID": me.userID
+            ], merge: true)
+        
+        database.collection("users").document(me.userID).getDocument { (snapshot, error) in
+            if error == nil, let snapshot = snapshot, let data = snapshot.data() {
+                self.me = AppUser(data: data)
+            }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Add" {
+            let destination = segue.destination as! AddViewController
+            destination.me = sender as! AppUser
+        } else if segue.identifier == "Settings" {
+            let destination = segue.destination as! SettingsViewController
+            destination.me = me
+        }
+    }
+    
+    @objc
+    func pressScreen() {
+        performSegue(withIdentifier: "Settings", sender: me)
+    }
+    
+    @IBAction func toAddViewController() {
+        performSegue(withIdentifier: "Add", sender: me)
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return postArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
+        cell.textLabel?.text = postArray[indexPath.row].content
+        database.collection("users").document(postArray[indexPath.row].senderID).getDocument { (snapshot, error) in
+            if error == nil, let snapshot = snapshot, let data = snapshot.data() {
+                let appUser = AppUser(data: data)
+                cell.detailTextLabel?.text = appUser.userName
+            }
+        }
+        return cell
     }
 }

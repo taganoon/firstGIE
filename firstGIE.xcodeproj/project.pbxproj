@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B115DE9286C1979006A2063 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B115DE8286C1979006A2063 /* SettingsViewController.swift */; };
+		4B115DEB286C1E3A006A2063 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B115DEA286C1E3A006A2063 /* SignInViewController.swift */; };
 		4B184EB7283DEFA000D3C9B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B184EB6283DEFA000D3C9B6 /* AppDelegate.swift */; };
 		4B184EB9283DEFA000D3C9B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B184EB8283DEFA000D3C9B6 /* SceneDelegate.swift */; };
 		4B184EBB283DEFA000D3C9B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B184EBA283DEFA000D3C9B6 /* ViewController.swift */; };
@@ -69,6 +71,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B115DE8286C1979006A2063 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		4B115DEA286C1E3A006A2063 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		4B184EB3283DEFA000D3C9B6 /* firstGIE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = firstGIE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B184EB6283DEFA000D3C9B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B184EB8283DEFA000D3C9B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +179,8 @@
 				4B72C1CA28473A5700CB70DA /* TimelineViewController.swift */,
 				4B72C1D3284F175D00CB70DA /* AccountViewController.swift */,
 				4BE7D1ED2864328000B9792F /* AddViewController.swift */,
+				4B115DE8286C1979006A2063 /* SettingsViewController.swift */,
+				4B115DEA286C1E3A006A2063 /* SignInViewController.swift */,
 				4B184EBF283DEFA200D3C9B6 /* Assets.xcassets */,
 				4B184EC1283DEFA200D3C9B6 /* LaunchScreen.storyboard */,
 				4B184EC4283DEFA200D3C9B6 /* Info.plist */,
@@ -371,6 +377,8 @@
 				4B184EB9283DEFA000D3C9B6 /* SceneDelegate.swift in Sources */,
 				4B72C1C72847391900CB70DA /* Post.swift in Sources */,
 				4B72C1CB28473A5700CB70DA /* TimelineViewController.swift in Sources */,
+				4B115DEB286C1E3A006A2063 /* SignInViewController.swift in Sources */,
+				4B115DE9286C1979006A2063 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
