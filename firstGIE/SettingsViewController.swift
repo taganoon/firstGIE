@@ -39,6 +39,11 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     @IBAction func logout() {
         try? Auth.auth().signOut()
         let accountViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! AccountViewController
+        accountViewController.modalPresentationStyle = .fullScreen
         present(accountViewController, animated: true, completion: nil)
+        //var modalPresentationStyle: UIModalPresentationStyle {
+               //get { return .fullScreen }
+               //set { super.modalPresentationStyle = newValue }
+           }
+        //dismiss(animated: true, completion: nil)
     }
-}

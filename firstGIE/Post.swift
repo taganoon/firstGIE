@@ -7,7 +7,7 @@ struct Post {
     let senderID: String
     let createdAt: Timestamp
     let updatedAt: Timestamp
-
+    
     init(data: [String: Any]) {
         content = data["content"] as! String
         postID = data["postID"] as! String

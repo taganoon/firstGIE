@@ -49,7 +49,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Add" {
             let destination = segue.destination as! AddViewController
-            destination.me = sender as! AppUser
+            destination.me = (sender as! AppUser)
         } else if segue.identifier == "Settings" {
             let destination = segue.destination as! SettingsViewController
             destination.me = me
@@ -64,6 +64,9 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBAction func toAddViewController() {
         performSegue(withIdentifier: "Add", sender: me)
     }
+    @IBAction func AddViewController() {
+        performSegue(withIdentifier: "Settings", sender: me)
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return postArray.count
@@ -72,6 +75,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
         cell.textLabel?.text = postArray[indexPath.row].content
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 18)
         database.collection("users").document(postArray[indexPath.row].senderID).getDocument { (snapshot, error) in
             if error == nil, let snapshot = snapshot, let data = snapshot.data() {
                 let appUser = AppUser(data: data)

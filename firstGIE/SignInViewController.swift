@@ -12,6 +12,11 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         passwordTextField.delegate = self
     }
     
+    override var modalPresentationStyle: UIModalPresentationStyle {
+                get { return .fullScreen }
+                set { super.modalPresentationStyle = newValue }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Timeline" {
             let user = sender as! User
@@ -29,5 +34,8 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
                 self.performSegue(withIdentifier: "Timeline", sender: result.user)
             }
         }
+    }
+    @IBAction func back() {
+        dismiss(animated: true, completion: nil)
     }
 }
