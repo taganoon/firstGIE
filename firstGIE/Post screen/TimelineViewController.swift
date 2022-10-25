@@ -14,6 +14,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         database = Firestore.firestore()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(UINib(nibName: "PostTableViewCell", bundle: nil), forCellReuseIdentifier: "postcell")
         
         let press = UILongPressGestureRecognizer(target: self, action: #selector(pressScreen))
         press.minimumPressDuration = 1.5
@@ -60,10 +61,10 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     func pressScreen() {
         performSegue(withIdentifier: "Settings", sender: me)
     }
-    
     @IBAction func toAddViewController() {
         performSegue(withIdentifier: "Add", sender: me)
     }
+    
     @IBAction func AddViewController() {
         performSegue(withIdentifier: "Settings", sender: me)
     }
@@ -73,7 +74,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "postcell", for: indexPath) as! PostTableViewCell
         cell.textLabel?.text = postArray[indexPath.row].content
         cell.textLabel?.font = UIFont.systemFont(ofSize: 18)
         database.collection("users").document(postArray[indexPath.row].senderID).getDocument { (snapshot, error) in
@@ -84,4 +85,9 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         return cell
     }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
+        return 150
+    }
+    
 }
+

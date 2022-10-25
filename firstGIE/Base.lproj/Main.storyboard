@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dzz-r7-drc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dzz-r7-drc">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -52,6 +52,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="registerAccount" destination="dzz-r7-drc" eventType="touchUpInside" id="0Ey-rX-jfe"/>
+                                    <segue destination="BEZ-MP-g9T" kind="presentation" identifier="Timeline" id="4tP-eZ-GgY"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワード" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gwj-Ta-H9b">
@@ -83,17 +84,16 @@
                     <connections>
                         <outlet property="emailTextField" destination="Q71-7m-cYl" id="xgh-Js-QmK"/>
                         <outlet property="passwordTextField" destination="gwj-Ta-H9b" id="ZvK-dl-TEx"/>
-                        <segue destination="BEZ-MP-g9T" kind="presentation" identifier="Timeline" modalPresentationStyle="fullScreen" id="XU7-yC-Leb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BdJ-L3-0Hr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53.623188405797109" y="-115.17857142857142"/>
+            <point key="canvasLocation" x="632" y="-104"/>
         </scene>
         <!--Timeline View Controller-->
         <scene sceneID="Yle-oC-LlR">
             <objects>
-                <viewController id="BEZ-MP-g9T" customClass="TimelineViewController" customModule="firstGIE" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BEZ-MP-g9T" customClass="TimelineViewController" customModule="firstGIE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JkK-tV-dSg">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -103,28 +103,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="10" reuseIdentifier="Cell" textLabel="Ois-vg-xgZ" detailTextLabel="wK8-PV-wKU" rowHeight="75" style="IBUITableViewCellStyleSubtitle" id="9W7-Rs-yuj">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="75"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="10" reuseIdentifier="Cell" rowHeight="96" id="9W7-Rs-yuj">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="96"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.94999999999999996" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9W7-Rs-yuj" id="2Td-cu-Y2T">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ois-vg-xgZ">
-                                                    <rect key="frame" x="30" y="22" width="25" height="14.333333333333334"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wK8-PV-wKU">
-                                                    <rect key="frame" x="30" y="38.333333333333336" width="30.333333333333332" height="13.333333333333334"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -141,14 +125,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="1vy-k6-yXu">
-                                <rect key="frame" x="244" y="730" width="111" height="50"/>
+                                <rect key="frame" x="264" y="710" width="85" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="投稿">
+                                <buttonConfiguration key="configuration" style="plain" title="＋">
                                     <backgroundConfiguration key="background" strokeWidth="0.0" strokeOutset="0.0">
                                         <color key="backgroundColor" systemColor="linkColor"/>
                                     </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="42"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -159,6 +143,7 @@
                         <viewLayoutGuide key="safeArea" id="3a9-l7-9Bg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="XGG-ft-RHd"/>
                     <connections>
                         <outlet property="tableView" destination="WwI-n9-4z8" id="c5B-2V-0e2"/>
                         <segue destination="vV9-g2-dXu" kind="presentation" identifier="Add" modalPresentationStyle="fullScreen" id="t6J-B6-TkN"/>
@@ -167,7 +152,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o21-YD-2ag" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="884.61538461538464" y="178.43601895734596"/>
+            <point key="canvasLocation" x="1813.8461538461538" y="178.43601895734596"/>
         </scene>
         <!--Add View Controller-->
         <scene sceneID="5cy-xd-LtH">
@@ -206,6 +191,7 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ゲームの攻略方法、ゲームのセール情報など etc..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPC-h1-koA">
                                 <rect key="frame" x="15" y="205" width="390" height="43"/>
@@ -215,7 +201,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6i9-Sb-hg9">
-                                <rect key="frame" x="15" y="501" width="151" height="59"/>
+                                <rect key="frame" x="15" y="726" width="151" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="tintColor"/>
                                 <state key="normal" title="Button"/>
@@ -224,30 +210,31 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="addimage" destination="vV9-g2-dXu" eventType="touchDown" id="J9J-WT-MzU"/>
+                                    <action selector="cameraButtonAction:" destination="vV9-g2-dXu" eventType="touchDown" id="PCw-MV-YzV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lic-kt-zMQ">
-                                <rect key="frame" x="217" y="501" width="151" height="59"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="van-51-pcb">
+                                <rect key="frame" x="71" y="492" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="tintColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="URLを追加">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                            </button>
+                            </imageView>
+                            <pasteControl contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" target="4fm-C7-46r" displayMode="labelOnly" cornerStyle="medium" translatesAutoresizingMaskIntoConstraints="NO" id="IWc-AE-Qip">
+                                <rect key="frame" x="223" y="726" width="151" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="baseForegroundColor"/>
+                                <nil key="baseBackgroundColor"/>
+                            </pasteControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="axT-PC-0Ip"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
                         <outlet property="contentTextView" destination="4fm-C7-46r" id="yvl-H6-T45"/>
+                        <outlet property="pictureImage" destination="van-51-pcb" id="r7Z-8x-gRn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SMf-XW-1ID" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1789.2307692307693" y="-115.87677725118483"/>
+            <point key="canvasLocation" x="2718.4615384615386" y="-115.87677725118483"/>
         </scene>
         <!--Storyboard Reference-->
         <scene sceneID="e5g-Ct-LxZ">
@@ -255,7 +242,7 @@
                 <viewControllerPlaceholder id="krT-23-trw" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbR-s7-YI9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="56" y="457"/>
+            <point key="canvasLocation" x="-118" y="150"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="EiF-yV-Nly">
@@ -286,6 +273,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="tappedSignInButton" destination="yIV-97-Uzw" eventType="touchDown" id="aBd-1q-Qi7"/>
+                                    <segue destination="BEZ-MP-g9T" kind="presentation" identifier="Timeline" id="bPQ-Ib-KDn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGs-Zg-Jtv">
@@ -306,12 +294,11 @@
                     <connections>
                         <outlet property="emailTextField" destination="Cpu-TV-a5p" id="W7c-mM-23H"/>
                         <outlet property="passwordTextField" destination="VYB-aI-Y2A" id="xlf-1e-lVb"/>
-                        <segue destination="BEZ-MP-g9T" kind="presentation" identifier="Timeline" modalPresentationStyle="fullScreen" id="dPv-fO-jTv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nr6-N7-fiq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53.623188405797109" y="527.67857142857144"/>
+            <point key="canvasLocation" x="632" y="548"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="wX6-6Z-ovL">
@@ -383,11 +370,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OdA-Be-hf8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1790.7692307692307" y="528.9099526066351"/>
+            <point key="canvasLocation" x="2720" y="528.9099526066351"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="XU7-yC-Leb"/>
+        <segue reference="4tP-eZ-GgY"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="linkColor">

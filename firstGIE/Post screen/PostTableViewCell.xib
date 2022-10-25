@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="postcell" rowHeight="235" id="KGk-i7-Jjw" customClass="PostTableViewCell" customModule="firstGIE" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="438" height="248"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="438" height="248"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="default.png" translatesAutoresizingMaskIntoConstraints="NO" id="lv8-22-cF0">
+                        <rect key="frame" x="20" y="21" width="35" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="35" id="aMe-kW-Lm8"/>
+                            <constraint firstAttribute="height" constant="35" id="uh2-M0-vDX"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ユーザー名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wij-8g-gCG">
+                        <rect key="frame" x="78" y="24" width="258" height="28"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="投稿日" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQ1-wE-KBU">
+                        <rect key="frame" x="349" y="30" width="43" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="43" id="rIt-FI-3Ec"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmI-ec-c4B">
+                        <rect key="frame" x="36" y="207" width="54.666666666666657" height="35"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Like"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLH-KI-rAi">
+                        <rect key="frame" x="143" y="207" width="153" height="35"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="comment"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7m-kF-oln">
+                        <rect key="frame" x="325" y="207" width="67" height="35"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="share"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="dmI-ec-c4B" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="33" id="3Xq-16-yDr"/>
+                    <constraint firstAttribute="trailing" secondItem="A7m-kF-oln" secondAttribute="trailing" constant="31" id="3hJ-eF-x9F"/>
+                    <constraint firstItem="cLH-KI-rAi" firstAttribute="leading" secondItem="dmI-ec-c4B" secondAttribute="trailing" constant="72.333333333333343" id="FCe-gE-JX5"/>
+                    <constraint firstAttribute="bottom" secondItem="dmI-ec-c4B" secondAttribute="bottom" constant="6" id="OcB-ka-ekw"/>
+                    <constraint firstItem="wij-8g-gCG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="S0K-EA-Vlu"/>
+                    <constraint firstAttribute="trailing" secondItem="qQ1-wE-KBU" secondAttribute="trailing" constant="16" id="Yfs-qd-WpZ"/>
+                    <constraint firstItem="lv8-22-cF0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="aXo-k5-W0X"/>
+                    <constraint firstAttribute="bottom" secondItem="A7m-kF-oln" secondAttribute="bottom" constant="6" id="cd5-zq-2LV"/>
+                    <constraint firstItem="qQ1-wE-KBU" firstAttribute="leading" secondItem="wij-8g-gCG" secondAttribute="trailing" constant="8" symbolic="YES" id="d40-dK-fv1"/>
+                    <constraint firstAttribute="bottom" secondItem="cLH-KI-rAi" secondAttribute="bottom" constant="6" id="qAO-ta-E0S"/>
+                    <constraint firstItem="lv8-22-cF0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="tSH-uq-msL"/>
+                    <constraint firstItem="qQ1-wE-KBU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="xU1-3J-Iri"/>
+                    <constraint firstItem="A7m-kF-oln" firstAttribute="leading" secondItem="cLH-KI-rAi" secondAttribute="trailing" constant="62" id="xkf-io-scu"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="created" destination="qQ1-wE-KBU" id="Vhm-rM-bz9"/>
+                <outlet property="userProfilePic" destination="lv8-22-cF0" id="ca0-Ft-ANb"/>
+                <outlet property="usernameLabel" destination="wij-8g-gCG" id="qnE-Vr-xHb"/>
+            </connections>
+            <point key="canvasLocation" x="272.30769230769232" y="68.957345971563981"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="default.png" width="225" height="225"/>
+    </resources>
+</document>
