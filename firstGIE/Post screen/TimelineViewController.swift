@@ -37,13 +37,15 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         
         database.collection("users").document(me.userID).setData([
-            "userID": me.userID
+            "userID": me.userID,
+            //"userName": me.userName
             ], merge: true)
         
         database.collection("users").document(me.userID).getDocument { (snapshot, error) in
             if error == nil, let snapshot = snapshot, let data = snapshot.data() {
                 self.me = AppUser(data: data)
             }
+            self.tableView.reloadData()
         }
     }
     
@@ -80,7 +82,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         database.collection("users").document(postArray[indexPath.row].senderID).getDocument { (snapshot, error) in
             if error == nil, let snapshot = snapshot, let data = snapshot.data() {
                 let appUser = AppUser(data: data)
-                cell.detailTextLabel?.text = appUser.userName
+                cell.usernameLabel?.text = appUser.userName
             }
         }
         return cell

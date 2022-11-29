@@ -68,6 +68,7 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
     @IBAction func postContent() {
         let content = contentTextView.text!
         let saveDocument = database.collection("posts").document()
+        let docRef = database.collection("users").document("fNg1YEYKEdf6mMjGv3sJc28Nkd03")
         saveDocument.setData([
             "content": content,
             "postID": saveDocument.documentID,
@@ -78,6 +79,14 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
         ]) { error in
             if error == nil {
                 self.dismiss(animated: true, completion: nil)
+            }
+        }
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                print("Document data: \(dataDescription)")
+            } else {
+                print("Document does not exist")
             }
         }
     }

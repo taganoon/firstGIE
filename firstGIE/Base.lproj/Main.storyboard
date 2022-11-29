@@ -1,19 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dzz-r7-drc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gxt-ec-j1I">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--First View Controller-->
+        <scene sceneID="0nT-bH-O8W">
+            <objects>
+                <viewController id="Gxt-ec-j1I" customClass="FirstViewController" customModule="firstGIE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lor-aC-oPv">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to GIE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fND-nH-dz0">
+                                <rect key="frame" x="46" y="110" width="298" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="for all gamers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ewi-oX-3Av">
+                                <rect key="frame" x="88" y="164" width="217" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKr-3z-hOA">
+                                <rect key="frame" x="72" y="358" width="249" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="sign up">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="74"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="signupButton" destination="Gxt-ec-j1I" eventType="touchUpInside" id="9H4-Fl-z9p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cj-9y-xzR">
+                                <rect key="frame" x="84" y="545" width="224" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="sign in">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="74"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="yIV-97-Uzw" kind="presentation" modalPresentationStyle="fullScreen" id="O65-rN-AUc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="新規登録の方はこちら" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCD-J6-mSC">
+                                <rect key="frame" x="94" y="342" width="204" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="アカウントをお持ちの方はこちら" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7B-uG-xUS">
+                                <rect key="frame" x="72" y="539" width="260" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8fN-On-hWu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <segue destination="qqf-gI-ZkX" kind="presentation" identifier="toSecond" id="SrT-fk-Dn8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0OF-cO-FHX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-569" y="188"/>
+        </scene>
         <!--Account View Controller-->
         <scene sceneID="fpB-DC-qww">
             <objects>
                 <viewController id="dzz-r7-drc" customClass="AccountViewController" customModule="firstGIE" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Pz-9D-cce">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="818-VL-MKZ">
@@ -23,36 +93,21 @@
                                 <color key="textColor" systemColor="systemGray6Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="新規登録" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HR0-yw-nEr">
-                                <rect key="frame" x="95" y="137" width="201" height="73"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                <color key="textColor" systemColor="tintColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="メールアドレス" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q71-7m-cYl">
                                 <rect key="frame" x="70" y="284" width="250" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="すでにアカウントをお持ちの方はこちら" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPe-7Z-N49">
-                                <rect key="frame" x="39" y="709" width="312" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="piO-ph-3nX">
-                                <rect key="frame" x="141" y="444" width="109" height="65"/>
+                                <rect key="frame" x="141" y="576" width="109" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="登録">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="42"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="registerAccount" destination="dzz-r7-drc" eventType="touchUpInside" id="0Ey-rX-jfe"/>
-                                    <segue destination="BEZ-MP-g9T" kind="presentation" identifier="Timeline" id="4tP-eZ-GgY"/>
+                                    <action selector="registerAccount" destination="dzz-r7-drc" eventType="touchUpInside" id="U9r-0z-WFB"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワード" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gwj-Ta-H9b">
@@ -61,34 +116,46 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fh-wj-H4H">
-                                <rect key="frame" x="106" y="752" width="178" height="46"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nR4-dB-ZM3">
+                                <rect key="frame" x="23" y="33" width="75" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="ログイン">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" systemColor="linkColor"/>
-                                        <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="37"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <buttonConfiguration key="configuration" style="plain" title="戻る">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="yIV-97-Uzw" kind="presentation" modalPresentationStyle="fullScreen" id="ZHR-tq-iMz"/>
+                                    <action selector="back" destination="NZz-Gq-r6v" eventType="touchDown" id="vv0-mr-j9q"/>
+                                    <action selector="back" destination="dzz-r7-drc" eventType="touchDownRepeat" id="weH-F8-Fed"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="新規登録" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HR0-yw-nEr">
+                                <rect key="frame" x="95" y="130" width="201" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <color key="textColor" systemColor="tintColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ユーザー名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QCS-Fe-fJC">
+                                <rect key="frame" x="70" y="427" width="250" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="s5O-kM-Lt1"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Q6A-7T-LUB"/>
                     <connections>
-                        <outlet property="emailTextField" destination="Q71-7m-cYl" id="xgh-Js-QmK"/>
-                        <outlet property="passwordTextField" destination="gwj-Ta-H9b" id="ZvK-dl-TEx"/>
+                        <outlet property="emailTextField" destination="Q71-7m-cYl" id="6pg-e3-DTk"/>
+                        <outlet property="passwordTextField" destination="gwj-Ta-H9b" id="ksU-xN-MUj"/>
+                        <outlet property="userNameTextField" destination="QCS-Fe-fJC" id="nPb-Ap-caB"/>
+                        <segue destination="BEZ-MP-g9T" kind="presentation" identifier="Timeline" id="ZuU-7c-q0u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BdJ-L3-0Hr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="632" y="-104"/>
+            <point key="canvasLocation" x="1560" y="-104.50236966824644"/>
         </scene>
         <!--Timeline View Controller-->
         <scene sceneID="Yle-oC-LlR">
@@ -152,7 +219,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o21-YD-2ag" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1813.8461538461538" y="178.43601895734596"/>
+            <point key="canvasLocation" x="2603.0769230769229" y="271.56398104265401"/>
         </scene>
         <!--Add View Controller-->
         <scene sceneID="5cy-xd-LtH">
@@ -234,7 +301,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SMf-XW-1ID" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2718.4615384615386" y="-115.87677725118483"/>
+            <point key="canvasLocation" x="3649.2307692307691" y="-123.69668246445497"/>
         </scene>
         <!--Storyboard Reference-->
         <scene sceneID="e5g-Ct-LxZ">
@@ -264,18 +331,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dz-T9-sVs">
-                                <rect key="frame" x="115" y="415" width="161" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="サインイン">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="27"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="tappedSignInButton" destination="yIV-97-Uzw" eventType="touchDown" id="aBd-1q-Qi7"/>
-                                    <segue destination="BEZ-MP-g9T" kind="presentation" identifier="Timeline" id="bPQ-Ib-KDn"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGs-Zg-Jtv">
                                 <rect key="frame" x="16" y="44" width="75" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -287,6 +342,17 @@
                                     <action selector="back" destination="yIV-97-Uzw" eventType="touchDown" id="9Ac-VD-J64"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dz-T9-sVs">
+                                <rect key="frame" x="115" y="470" width="161" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="サインイン">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="27"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="tappedSignInButton" destination="yIV-97-Uzw" eventType="touchDown" id="aBd-1q-Qi7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="F3l-Do-16o"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -294,6 +360,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="Cpu-TV-a5p" id="W7c-mM-23H"/>
                         <outlet property="passwordTextField" destination="VYB-aI-Y2A" id="xlf-1e-lVb"/>
+                        <segue destination="BEZ-MP-g9T" kind="presentation" identifier="Timeline" id="dvV-tb-7ra"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nr6-N7-fiq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -370,11 +437,29 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OdA-Be-hf8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2720" y="528.9099526066351"/>
+            <point key="canvasLocation" x="3649.2307692307691" y="528.9099526066351"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ax4-oe-8HY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qqf-gI-ZkX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="z7f-eB-kGE">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dzz-r7-drc" kind="relationship" relationship="rootViewController" id="6ot-N1-0Ll"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mh9-g2-TcW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="630.76923076923072" y="-104.50236966824644"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="4tP-eZ-GgY"/>
+        <segue reference="ZuU-7c-q0u"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="linkColor">

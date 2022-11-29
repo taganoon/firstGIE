@@ -46,6 +46,7 @@
 		4B184F1A283E03EB00D3C9B6 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4B184F19283E03EB00D3C9B6 /* FirebaseRemoteConfigSwift */; };
 		4B184F1C283E03EB00D3C9B6 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 4B184F1B283E03EB00D3C9B6 /* FirebaseStorage */; };
 		4B184F1E283E03EB00D3C9B6 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 4B184F1D283E03EB00D3C9B6 /* FirebaseStorageCombine-Community */; };
+		4B264CC32935D12C0079B9C7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B264CC22935D12C0079B9C7 /* FirstViewController.swift */; };
 		4B46CD8C28E2C1750023F23C /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B46CD8B28E2C1750023F23C /* ShareViewController.swift */; };
 		4B46CD8F28E2C1750023F23C /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B46CD8D28E2C1750023F23C /* MainInterface.storyboard */; };
 		4B46CD9328E2C1750023F23C /* appShareExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4B46CD8928E2C1750023F23C /* appShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -116,6 +117,7 @@
 		4B184ED7283DEFA200D3C9B6 /* firstGIEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstGIEUITests.swift; sourceTree = "<group>"; };
 		4B184ED9283DEFA200D3C9B6 /* firstGIEUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstGIEUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4B184EE6283DF7CD00D3C9B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4B264CC22935D12C0079B9C7 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		4B46CD8928E2C1750023F23C /* appShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = appShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B46CD8B28E2C1750023F23C /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		4B46CD8E28E2C1750023F23C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				4B72C1C8284739AE00CB70DA /* AppUser.swift */,
 				4BE7310C28ED58DB00E5867A /* Post screen */,
 				4B72C1D3284F175D00CB70DA /* AccountViewController.swift */,
+				4B264CC22935D12C0079B9C7 /* FirstViewController.swift */,
 				4BE7D1ED2864328000B9792F /* AddViewController.swift */,
 				4B115DE8286C1979006A2063 /* SettingsViewController.swift */,
 				4B115DEA286C1E3A006A2063 /* SignInViewController.swift */,
@@ -487,6 +490,7 @@
 				4BE7310928ED54E600E5867A /* PostTableViewCell.swift in Sources */,
 				4B184EBB283DEFA000D3C9B6 /* ViewController.swift in Sources */,
 				4B72C1C9284739AE00CB70DA /* AppUser.swift in Sources */,
+				4B264CC32935D12C0079B9C7 /* FirstViewController.swift in Sources */,
 				4BE7D1EE2864328000B9792F /* AddViewController.swift in Sources */,
 				4B72C1D4284F175D00CB70DA /* AccountViewController.swift in Sources */,
 				4B184EB7283DEFA000D3C9B6 /* AppDelegate.swift in Sources */,
